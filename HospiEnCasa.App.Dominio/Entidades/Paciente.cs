@@ -27,5 +27,7 @@ namespace HospiEnCasa.App.Dominio
         /// </summary>
         /// <value></value>
         public System.Collections.Generic.List<SignoVital> SignosVitales { get; set; }
+        // public List<SignoVital> SignosVitales { get; set; }
+
     }
 }

@@ -54,6 +54,21 @@ namespace HospiEnCasa.App.Persistencia
 
             return pacienteEncontrado; // Retorna el paciente encontrado
         }
+        Medico IRepositorioPaciente.AsignarMedico(int idPaciente, int idMedico)
+        { 
+            var pacienteEncontrado = _appContext.Pacientes.FirstOrDefault(p => p.Id == idPaciente);
+            if (pacienteEncontrado != null)
+            { 
+                var medicoEncontrado = _appContext.Medicos.FirstOrDefault(m => m.Id == idMedico);
+                if (medicoEncontrado != null)
+                { 
+                    pacienteEncontrado.Medico = medicoEncontrado;
+                    _appContext.SaveChanges();
+                }
+            return medicoEncontrado;
+            }
+        return null;
+        }
     }
 }
 // implementa la interfaz
