@@ -1,15 +1,30 @@
 ﻿@page
+@using HospiEnCasa.App.Dominio 
 @model HospiEnCasa.App.Frontend.Pages.Pacientes.IndexModel
 @{
 }
 <h1>Listado de Pacientes</h1>
+
+<form method="get" classs="form-inline">
+    <label class="my-1 mr-2" for="g">Género</label> <!-- Copiado de Bootstrap https://getbootstrap.com/docs/4.6/components/forms/ Inline forms -->
+    <select class="custom-select my-1 mr-sm-2" id="g" name="g" asp-items="Html.GetEnumSelectList<Genero>()" class="form-control" asp-for="@Model.gActual">
+    <option value="-1">Ver todos</option> <!-- -1 para mostrara "Ver todos" -->
+    </select>    
+    <button type="submit" class="btn btn-primary my-1">Filtrar</button>
+</form> 
+
+<form method="get" classs = "form-inline">
+    <label class="my-1 mr-2" for = "b">Buscar</label> <!-- Copiado de Bootstrap https://getbootstrap.com/docs/4.6/components/forms/ Inline forms -->
+    <input type="text" class = "form-control mb-2 mr-sm-2" id = "b" name = "b" placeholder = "Texto de búsqueda..." asp-for = "@Model.bActual">
+    <button type="submit" class = "btn btn-primary my-1">Buscar</button>
+</form> 
 
 <br>
 <a class = "btn btn-primary" asp-page = "./Create">Nuevo Paciente</a>
 <br>
 <br>
 
-<table class="table">
+<table class = "table">
     <thead>
         <tr>
             <th scope = "col">Nombre</th>
