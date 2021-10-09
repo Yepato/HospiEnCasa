@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using HospiEnCasa.App.Dominio;
 
@@ -40,7 +41,13 @@ namespace HospiEnCasa.App.Persistencia
 
         Paciente IRepositorioPaciente.GetPaciente (int idPaciente)
         {
-            return _appContext.Pacientes.FirstOrDefault(p => p.Id == idPaciente); // Retorna lo que encuentra
+            //return _appContext.Pacientes.FirstOrDefault(p => p.Id == idPaciente); // Retorna lo que encuentra
+            // Para poder asignar médico en la web se sustituye con:
+            var paciente = _appContext.Pacientes
+                        .Where(p => p.Id == idPaciente)
+                        .Include(p => p.Medico)
+                        .FirstOrDefault();
+            return paciente;            
         }
 
         Paciente IRepositorioPaciente.UpdatePaciente (Paciente paciente)
@@ -59,12 +66,13 @@ namespace HospiEnCasa.App.Persistencia
 
             return pacienteEncontrado; // Retorna el paciente encontrado
         }
+        
         Medico IRepositorioPaciente.AsignarMedico(int idPaciente, int idMedico)
         { 
-            var pacienteEncontrado = _appContext.Pacientes.FirstOrDefault(p => p.Id == idPaciente);
+            var pacienteEncontrado = _appContext.Pacientes.Find(idPaciente);
             if (pacienteEncontrado != null)
             { 
-                var medicoEncontrado = _appContext.Medicos.FirstOrDefault(m => m.Id == idMedico);
+                var medicoEncontrado = _appContext.Medicos.Find(idMedico);
                 if (medicoEncontrado != null)
                 { 
                     pacienteEncontrado.Medico = medicoEncontrado;

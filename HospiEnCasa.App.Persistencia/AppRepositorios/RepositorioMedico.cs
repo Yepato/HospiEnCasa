@@ -57,7 +57,6 @@ namespace HospiEnCasa.App.Persistencia
 
                 _appContext.SaveChanges();        
             }
-
             return medicoEncontrado; // Retorna el medico encontrado
         }
     }
