@@ -8,17 +8,19 @@ namespace HospiEnCasa.App.Consola
 {
     class Program
     {
-        private static IRepositorioPaciente _repoPaciente = new RepositorioPaciente(new Persistencia.AppContext());
-        private static IRepositorioMedico _repoMedico = new RepositorioMedico(new Persistencia.AppContext());
+        //private static IRepositorioPaciente _repoPaciente = new RepositorioPaciente(new Persistencia.AppContext());
+        private static IRepositorioPaciente _repoPaciente = new RepositorioPaciente();
+        //private static IRepositorioMedico _repoMedico = new RepositorioMedico(new Persistencia.AppContext());
+        private static IRepositorioMedico _repoMedico = new RepositorioMedico();
 
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            AddPaciente();
-            AddMedico();
+            //AddPaciente();
+            //AddMedico();
             BuscarPaciente(1);
             MostrarPacientes();
-            AsignarMedico();
+            //AsignarMedico();
         }
         private static void AddPaciente()
         {
@@ -39,7 +41,7 @@ namespace HospiEnCasa.App.Consola
         private static void BuscarPaciente(int idPaciente)
         {
             var paciente = _repoPaciente.GetPaciente(idPaciente);
-            Console.WriteLine("Nombre: " + paciente.Nombre + " " + paciente.Apellido + "  Género: " + paciente.Genero);
+            Console.WriteLine("Paciente encontrado " + idPaciente +": " + paciente.Nombre + " " + paciente.Apellido + "  Género: " + paciente.Genero);
         }
         private static void MostrarPacientes()
         {
@@ -65,8 +67,8 @@ namespace HospiEnCasa.App.Consola
         }
         private static void AsignarMedico()
         {
-            var medico = _repoPaciente.AsignarMedico(2,17);
-            var paciente = _repoPaciente.GetPaciente(2);
+            var medico = _repoPaciente.AsignarMedico(5,17);
+            var paciente = _repoPaciente.GetPaciente(5);
             Console.WriteLine("Médico: " + medico.Nombre + " " + medico.Apellido + " quedó asignado al Paciente: " + paciente.Nombre + " " + paciente.Apellido);
         }
     }

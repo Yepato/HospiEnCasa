@@ -1,4 +1,4 @@
-
+using System;
 namespace HospiEnCasa.App.Dominio
 {
     /// <summary>Class <c>Medico</c>
