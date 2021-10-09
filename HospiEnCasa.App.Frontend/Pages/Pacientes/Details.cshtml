@@ -39,5 +39,19 @@
             <td>@Model.paciente.Medico.Nombre</td>
         }
     </tr>                  
+    <tr>
+        <th scope="col">Signos Vitales</th>
+        <td>
+            <ul>
+                @foreach (var signo in Model.paciente.SignosVitales)
+                {
+                    <li>@signo.Signo - @signo.Valor</li>
+                }
+            </ul>    
+            <a class = "btn btn-primary" asp-page = "./AddSignoVital" asp-route-id = "@Model.paciente.Id">
+                Asignar Signo Vital
+            </a>
+        </td>
+    </tr>                  
 </table>
 <a class = "btn btn-primary" asp-page = "./Index">Volver</a>

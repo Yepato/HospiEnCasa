@@ -79,3 +79,4 @@
 /home/p4t0/Documents/MisiónTIC2022/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Frontend/obj/Debug/net5.0/Razor/Pages/Medicos/Create.cshtml.g.cs
 /home/p4t0/Documents/MisiónTIC2022/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Frontend/obj/Debug/net5.0/Razor/Pages/Medicos/Edit.cshtml.g.cs
 /home/p4t0/Documents/MisiónTIC2022/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Frontend/obj/Debug/net5.0/Razor/Pages/Pacientes/AddMedico.cshtml.g.cs
+/home/p4t0/Documents/MisiónTIC2022/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Frontend/obj/Debug/net5.0/Razor/Pages/Pacientes/AddSignoVital.cshtml.g.cs
