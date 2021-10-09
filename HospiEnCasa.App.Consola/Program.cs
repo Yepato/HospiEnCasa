@@ -10,7 +10,8 @@ namespace HospiEnCasa.App.Consola
     {
         //private static IRepositorioPaciente _repoPaciente = new RepositorioPaciente(new Persistencia.AppContext());
         private static IRepositorioPaciente _repoPaciente = new RepositorioPaciente();
-        private static IRepositorioMedico _repoMedico = new RepositorioMedico(new Persistencia.AppContext());
+        //private static IRepositorioMedico _repoMedico = new RepositorioMedico(new Persistencia.AppContext());
+        private static IRepositorioMedico _repoMedico = new RepositorioMedico();
 
         static void Main(string[] args)
         {
@@ -66,8 +67,8 @@ namespace HospiEnCasa.App.Consola
         }
         private static void AsignarMedico()
         {
-            var medico = _repoPaciente.AsignarMedico(2,17);
-            var paciente = _repoPaciente.GetPaciente(2);
+            var medico = _repoPaciente.AsignarMedico(5,17);
+            var paciente = _repoPaciente.GetPaciente(5);
             Console.WriteLine("Médico: " + medico.Nombre + " " + medico.Apellido + " quedó asignado al Paciente: " + paciente.Nombre + " " + paciente.Apellido);
         }
     }

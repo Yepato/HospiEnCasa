@@ -74,3 +74,7 @@
 /home/p4t0/Documents/MisiónTIC2022/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Frontend/obj/Debug/net5.0/Razor/Pages/Pacientes/Details.cshtml.g.cs
 /home/p4t0/Documents/MisiónTIC2022/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Frontend/obj/Debug/net5.0/Razor/Pages/Pacientes/Create.cshtml.g.cs
 /home/p4t0/Documents/MisiónTIC2022/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Frontend/obj/Debug/net5.0/Razor/Pages/Pacientes/Edit.cshtml.g.cs
+/home/p4t0/Documents/MisiónTIC2022/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Frontend/obj/Debug/net5.0/Razor/Pages/Medicos/Index.cshtml.g.cs
+/home/p4t0/Documents/MisiónTIC2022/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Frontend/obj/Debug/net5.0/Razor/Pages/Medicos/Details.cshtml.g.cs
+/home/p4t0/Documents/MisiónTIC2022/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Frontend/obj/Debug/net5.0/Razor/Pages/Medicos/Create.cshtml.g.cs
+/home/p4t0/Documents/MisiónTIC2022/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Frontend/obj/Debug/net5.0/Razor/Pages/Medicos/Edit.cshtml.g.cs

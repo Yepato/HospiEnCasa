@@ -28,7 +28,7 @@ namespace HospiEnCasa.App.Persistencia
         {
             var pacienteEncontrado = _appContext.Pacientes.FirstOrDefault(p => p.Id == idPaciente); // p es el primero
             if(pacienteEncontrado == null)
-            return;
+                return;
             _appContext.Pacientes.Remove(pacienteEncontrado);
             _appContext.SaveChanges(); // Se deben guardar los cambios
         }

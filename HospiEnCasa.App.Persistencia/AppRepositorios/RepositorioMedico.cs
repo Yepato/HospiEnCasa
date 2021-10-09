@@ -7,11 +7,16 @@ namespace HospiEnCasa.App.Persistencia
 {
     public class RepositorioMedico : IRepositorioMedico
     {
-        private readonly AppContext _appContext; // Recomendable por seguridad
+        /*private readonly AppContext _appContext; // Recomendable por seguridad
         public RepositorioMedico(AppContext appContext)
         {
             _appContext = appContext; // Necesitamos definir un contexto
-        }
+        }*/
+
+        // Lo de arriba se sustituye por:
+        
+        private readonly AppContext _appContext = new AppContext();
+
         Medico IRepositorioMedico.AddMedico(Medico medico)
         { 
             var medicoAdicionado = _appContext.Medicos.Add(medico);
@@ -21,10 +26,10 @@ namespace HospiEnCasa.App.Persistencia
 
         void IRepositorioMedico.DeleteMedico(int idMedico)
         {
-            var pacienteEncontrado = _appContext.Pacientes.FirstOrDefault(p => p.Id == idMedico); // p es el primero
-            if(pacienteEncontrado == null)
-            return;
-            _appContext.Pacientes.Remove(pacienteEncontrado);
+            var medicoEncontrado = _appContext.Medicos.Find(idMedico);
+            if(medicoEncontrado == null)
+                return;
+            _appContext.Medicos.Remove(medicoEncontrado);
             _appContext.SaveChanges(); // Se deben guardar los cambios
         }
 
@@ -35,12 +40,12 @@ namespace HospiEnCasa.App.Persistencia
 
         Medico IRepositorioMedico.GetMedico (int idMedico)
         {
-            return _appContext.Medicos.FirstOrDefault(p => p.Id == idMedico); // Retorna lo que encuentra
+            return _appContext.Medicos.Find(idMedico); // Retorna lo que encuentra
         }
 
         Medico IRepositorioMedico.UpdateMedico (Medico medico)
         {
-            var medicoEncontrado = _appContext.Medicos.FirstOrDefault(p => p.Id == medico.Id);
+            var medicoEncontrado = _appContext.Medicos.Find(medico.Id);
             // No se busca el idMedico, se busca el medico.Id
             if(medicoEncontrado != null)
             {
