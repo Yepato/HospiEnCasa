@@ -54,7 +54,8 @@ namespace HospiEnCasa.App.Persistencia
                 medicoEncontrado.NumeroTelefono = medico.NumeroTelefono;
                 medicoEncontrado.Genero = medico.Genero;
                 medicoEncontrado.Especialidad = medico.Especialidad;
-
+                medicoEncontrado.Codigo = medico.Codigo;
+                medicoEncontrado.RegistroRethus = medico.RegistroRethus;
                 _appContext.SaveChanges();        
             }
             return medicoEncontrado; // Retorna el medico encontrado

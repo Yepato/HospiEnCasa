@@ -11,7 +11,6 @@
 /home/p4t0/Documents/MisiónTIC2022/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Persistencia/bin/Debug/net5.0/HospiEnCasa.App.Persistencia.pdb
 /home/p4t0/Documents/MisiónTIC2022/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Persistencia/bin/Debug/net5.0/HospiEnCasa.App.Dominio.dll
 /home/p4t0/Documents/MisiónTIC2022/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Persistencia/bin/Debug/net5.0/HospiEnCasa.App.Dominio.pdb
-/home/p4t0/Documents/MisiónTIC2022/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Persistencia/obj/Debug/net5.0/HospiEnCasa.App.Persistencia.csproj.CopyComplete
 /home/p4t0/Documents/MisiónTIC2022/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Persistencia/obj/Debug/net5.0/HospiEnCasa.App.Persistencia.dll
 /home/p4t0/Documents/MisiónTIC2022/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Persistencia/obj/Debug/net5.0/ref/HospiEnCasa.App.Persistencia.dll
 /home/p4t0/Documents/MisiónTIC2022/Hospitalizacion/HospiEnCasa.App/HospiEnCasa.App.Persistencia/obj/Debug/net5.0/HospiEnCasa.App.Persistencia.pdb
