@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using HospiEnCasa.App.Dominio;
 using HospiEnCasa.App.Persistencia;
+using Microsoft.AspNetCore.Authorization;
 
 namespace HospiEnCasa.App.Frontend.Pages.Pacientes
 {
